@@ -12,7 +12,7 @@ public class Folder {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "title")
+    @Column(name = "title") // you don't actually need to specify the name if it's the same
     private String title;
 
     @ManyToOne

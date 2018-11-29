@@ -16,7 +16,7 @@ public class User {
     @Column(name = "name")
     private String name;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user") // [you can put ', fetch = FetchType.LAZY' after "user" if you don't use projections]
     private List<Folder> folders;
 
     public User(String name) {
